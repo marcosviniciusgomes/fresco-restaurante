@@ -5,17 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fresco - Culinária Italiana</title>
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/style.css" media="all">
     <link rel="stylesheet" href="styles/media-queries.css">
 </head>
-<body>
+<body onresize="mudouTamanho()">
     <header>
-        <div class="menu-bg">
-            <div class="menu">
-                <div class="menu__logo">
-                    <a href="index.html"><img src="images/uploads/2019/07/fresco-logo-pequeno.png" alt="logo-fresco"></a>
+        <div>
+            <div id="menu">
+                <div class="menu_header">
+                    <a href="index.html" class="menu_logo"><img src="images/fresco-logo-pequeno.png" alt="logo-fresco"></a>
+                    <svg onclick="clickMenu()" height="40px" width="40px" version="1.1" id="burguer" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+                        viewBox="0 0 512 512"  xml:space="preserve">
+                    
+                        <g>
+                            <path class="st0" d="M256,0C114.617,0,0,114.618,0,256c0,141.383,114.617,256,256,256c141.382,0,256-114.617,256-256
+                                C512,114.618,397.382,0,256,0z M373.649,366.297H138.351V322.18h235.298V366.297z M373.649,278.055H138.351v-44.102h235.298
+                                V278.055z M373.649,189.828H138.351v-44.117h235.298V189.828z"/>
+                        </g>
+                    </svg>
                 </div>
-                <nav class="nav">
+                
+                <nav id="nav">
                     <ul class="nav__list">
                         <li><a href="#home" class="nav__link">Home</a></li>
                         <li><a href="#cardapio" class="nav__link">Cardápio</a></li>
@@ -27,70 +37,110 @@
             </div>
         </div>
     </header>
-
-    <section class="intro">
-        <div>
-            <img src="images/uploads/2019/07/barra-horizontal.png" alt="barra-horizontal">
+    
+    <section id="intro">
+        <div class="itens_intro">
+            <img src="images/barra-horizontal.png" alt="barra-horizontal">
             <h1 class="titulo_principal">Fresco</h1>
             <h2 class="subtitulo_principal">Especialidades Italianas</h2>
             <p>Comida boa / Bom vinho</p>
         </div>
     </section>
 
-    <section class="somos">
+    <section id="somos">
         <div class="quem_somos">
-            <p>O mais amado do bairro.</p>
+            <p class="paragrafo_">O mais amado do bairro.</p>
             <h2 class="section_titulo">Bem-vindo</h2>
             <h3 class="subtitulo">Reconhecido pela boa comida e bebida desde 1978.</h3>
-            <p>Premiada pelo instituto Curso em Vídeo de qualidade de culinária e oferecendo os melhores serviços. Premiada pelo instituto Curso em Vídeo de qualidade de culinária e oferecendo os melhores serviços.</p>
-            <div>
-                <p>Premiado pelo Instituto Nacional de Culinária na categoria S+ Premium.</p>
-                <button><a href="#">Mais sobre nós</a></button>
-            </div>
+            <p class="paragrafo2">Premiada pelo Instituto Nacional de culinária e oferecendo os melhores serviços.</p>
+
+            <p>Premiado no 25* Concurso Nacional de Culinária na categoria S+ Premium.</p>
+    
+            <button><a href="#">> Mais sobre nós</a></button>
         </div>
-        <div>
-            <img src="images/uploads/2019/07/pizza.jpg" alt="fatia-de-pizza">
+        <div class="img_pizza">
+            <img src="images/pizza.jpg" alt="fatia-de-pizza">
         </div>
         <div class="imagem_casal">
-            <div>
-                <h2>Horário</h2>
+            <div class="img_text">
+                <h2>Horário</h2> <hr>
                 <p>Todos os dias, de 9h até 23h</p>
             </div>
         </div>
     </section>
 
-    <section>
-        <div>
+    <section id="cardapio">
+        <div class="intro_cardapio">
+            <img src="images/folha-fundo-01.png" alt="">
             <h2 class="section_titulo">Nosso Cardápio</h2>
-            <h3 class="subtitulo">Ingredientes de qualidade, pratos saborosos</h3>
+            <h3>Ingredientes de qualidade, pratos saborosos</h3>
         </div>
         <div class="container_precos">
-            <div>
-                <img src="images/uploads/2019/07/prato04-300x255.jpg" alt="">
-                <h3>Peixe com ervas</h3>
-                <p>Acompanha salada e legumes.</p>
+            <div class="container-display">
+                <img src="images/prato04-300x255.jpg" alt="">
+                <div class="prato-nome">
+                    <h3 class="pratos">Peixe com ervas</h3>
+                    <p class="acompanhamento">Acompanha salada e legumes.</p>
+                </div>
                 <span class="prato_preco"><sup>R$</sup>25</span>
             </div>
-            <div>
-                <img src="images/uploads/2019/07/prato02-300x255.jpg" alt="">
-                <h3>Spaghetti Romano</h3>
-                <p>Molho de alho com tomate siciliano.</p>
+            <div class="container-display">
+                <img src="images/prato02-300x255.jpg" alt="">
+                <div class="prato-nome">
+                    <h3 class="pratos">Spaghetti Romano</h3>
+                    <p class="acompanhamento">Molho de alho com tomate siciliano.</p>
+                </div>
                 <span class="prato_preco"><sup>R$</sup>25</span>
             </div>
-            <div>
-                <img src="images/uploads/2019/07/prato01-300x255.jpg" alt="">
-                <h3>Fettuccine ao molho verde</h3>
-                <p>Molho de ervas do norte com hortelã e gengibre.</p>
+            <div class="container-display">
+                <img src="images/prato01-300x255.jpg" alt="">
+                <div class="prato-nome">
+                    <h3 class="pratos">Fettuccine ao molho verde</h3>
+                    <p class="acompanhamento">Molho de ervas do norte com hortelã e gengibre.</p>
+                </div>
                 <span class="prato_preco"><sup>R$</sup>25</span>
             </div>
-            <div>
-                <img src="images/uploads/2019/07/prato03-300x255.jpg" alt="">
-                <h3>Pizza Torino</h3>
-                <p>Acompanha molho especial da casa.</p>
+            <div class="container-display">
+                <img src="images/prato03-300x255.jpg" alt="">
+                <div class="prato-nome">
+                    <h3 class="pratos">Pizza Torino</h3>
+                    <p class="acompanhamento">Acompanha molho especial da casa.</p>
+                </div>
                 <span class="prato_preco"><sup>R$</sup>25</span>
             </div>
         </div>
-        <button><a href="#">Cardápio completo</a></button>
+        <a href="#">Cardápio completo</a>
     </section>
+    <section id="noticias">
+        <img class="img-noticias" src="images/restaurante01-300x226.jpg" alt="">
+        <div class="noticias">
+            <img src="images/taca-de-vinho-cheia-de-bebida.png" alt="">
+            <p>Toda quarta-feira</p>
+            <h2>Happy Hour!</h2>
+            <h3>Metade do preço nas garrafas de vinho e seis deliciosos lanches por R$9</h3>
+            <a href="">Mais Notícias</a>
+        </div>
+    </section>
+    <section>
+        
+    </section>
+    <script>
+
+        function clickMenu() {
+           if (nav.style.display == 'block') {
+            nav.style.display = 'none'
+           } else {
+            nav.style.display = 'block'
+           }
+        }
+
+        function mudouTamanho() {
+            if (window.innerWidth >= 768) {
+                nav.style.display = 'block'
+            } else {
+                nav.style.display = 'none'
+            }
+        }
+    </script>
 </body>
 </html>

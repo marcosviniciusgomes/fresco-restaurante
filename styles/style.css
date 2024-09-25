@@ -1,9 +1,347 @@
 @charset "UTF-8";
 
-@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Josefin+Sans:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Josefin+Sans:wght@300;400;500;600;700&family=Montserrat:wght@100;200;300;400;500&display=swap');
 
 :root {
+    font-size: 62.5%;
+
+    --cor0: #FFFAF2;
+    --cor1: #c66300;
+    --cor2: #F6820A;
+    --cor3: #0A2234;
+    --cor4: #1a5c37;
+    --cor5: #A57928;
+    --cor6: #292827;
+
     --fonte-padrão: Arial, Verdana, Helvetica, sans-serif;
     --fonte-berkshire: 'Berkshire Swash', cursive;
-    --fonte-Josefin: 'Josefin Sans', sans-serif;
+    --fonte-josefin: 'Josefin Sans', sans-serif;
+    --fonte-montserrat: 'Montserrat', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: white;
+    background-image: url(../images/folha-fundo-02.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    background-attachment: fixed;
+    text-decoration: none;
+    
+}
+
+a {
+    text-decoration: none;
+}
+
+h3 {
+    font-family: var(--fonte-josefin);
+}
+
+p {
+    font-family: var(--fonte-josefin);
+}
+
+hr {
+    border: none;
+    background-color: rgb(25, 106, 198);
+    height: 0.2rem;
+    width: 5rem;
+    margin: 1rem auto;
+}
+
+/*====== MENU HEADER =======*/
+
+.menu_header {
+    display: flex;
+    justify-content: space-between;
+    padding: 4rem;
+}
+
+svg#burguer {
+    fill: var(--cor2);
+    cursor: pointer;
+}
+
+svg#burguer:hover {
+    fill: var(--cor1);
+}
+
+/*====== HEADER ======*/
+
+section#intro {
+    background-image: url(/images/pizzaria-hero-fundo01.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    padding: 5rem;
+}
+
+.section_titulo {
+    font-family: var(--fonte-berkshire);
+}
+
+.itens_intro {
+    text-align: center;
+}
+
+.titulo_principal {
+    font-size: 8rem;
+    font-family: var(--fonte-berkshire);
+    font-weight: 200;
+    color: white;
+}
+
+.subtitulo_principal {
+    font-family: var(--fonte-josefin);
+    font-weight: 400;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: var(--cor2);
+}
+
+.itens_intro > p {
+    font-family: var(--fonte-josefin);
+    font-weight: 100;
+    font-size: 2rem;
+    font-style: italic;
+    color: var(--cor0);
+    padding-top: 3rem;
+    padding-bottom: 6rem;
+}
+
+/*====== QUEM SOMOS ======*/
+
+section#somos {
+    
+    text-align: center;
+    padding-top: 5rem;
+    padding-bottom: 10rem;
+} 
+
+.imagem_casal {
+    background-image: url(../images/restaurante02.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+}
+
+.img_text {
+    text-align: center;
+    padding-top: 57rem;
+    padding-bottom: 5rem;
+    color: white;
+}
+
+.img_text h2 {
+    font-family: var(--fonte-berkshire);
+    font-size: 2.5rem;
+    font-weight: 100;
+}
+
+.img_text p {
+    font-family: var(--fonte-josefin);
+    font-weight: 700;
+    font-size: 1.6rem;
+    padding-top: 1.5rem;
+} 
+
+.img_pizza {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.img_pizza img {
+    height: 60rem;
+    width: 40rem;
+}
+
+.quem_somos {
+    text-align: left;
+    padding: 5rem;
+}
+
+.quem_somos h2 {
+    font-size: 6.5rem;
+    color: var(--cor1);
+    padding-bottom: 3rem;
+}
+
+.subtitulo {
+    font-family: var(--fonte-montserrat);
+    color: var(--cor3);
+    font-weight: 600;
+    font-size: 3.5rem;
+    line-height: 1.5;
+    text-align: left;
+}
+
+.quem_somos .paragrafo_ {
+    font-family: var(--fonte-josefin);
+    color: var(--cor3);
+    font-weight: 600;
+    font-size: 2rem;
+}
+
+.quem_somos .paragrafo2 {
+    font-family: var(--fonte-josefin);
+    color: var(--cor3);
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    padding: 3rem 0;
+    text-align: left;
+}
+
+.quem_somos p {
+    font-family: var(--fonte-josefin);
+    color: var(--cor5);
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    padding-bottom: 3rem; 
+}
+
+.quem_somos button {
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    font-family: var(--fonte-josefin);
+    font-size: 1.8rem;
+    padding-bottom: 4rem;
+}
+
+.quem_somos button a {
+    color: var(--cor2);
+}
+
+.quem_somos button a:hover {
+    color: var(--cor1);
+}
+
+/*===== CARDÁPIO =====*/
+
+section#cardapio {
+    
+    background-color: var(--cor0);
+    text-align: center;
+    
+}
+
+#cardapio a {
+    background-color: var(--cor2);
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--cor0);
+    font-family: var(--fonte-josefin);
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding: 1rem;
+}
+
+.container-display {
+    display: flex;
+    padding-bottom: 6rem;
+}
+
+.container_precos {
+    padding: 5rem;
+}
+
+.container_precos h3 {
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--cor6);
+}
+
+.container_precos p {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #52514f;
+    padding-top: 2rem;
+}
+
+.container_precos span {
+    font-family: var(--fonte-josefin);
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--cor1);
+}
+
+.container_precos img {
+    height: 9rem;
+}
+
+.prato-nome {
+    text-align: left;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.intro_cardapio {
+    padding-top: 6rem;
+}
+
+.intro_cardapio h2 {
+    color: var(--cor1);
+    font-size: 2.5rem;
+    font-weight: 100;
+    padding-top: 1rem;
+}
+
+.intro_cardapio h3 {
+    color: var(--cor3);
+    font-size: 3rem;
+    font-weight: 700;
+    padding-top: 2rem;
+}
+
+
+/*===== NOTÍCIAS ======*/
+
+section#noticias {
+    text-align: center;
+    padding: 6rem;
+}
+
+.noticias {
+    padding-top: 4rem;
+}
+
+.noticias h2 {
+    font-family: var(--fonte-berkshire);
+    font-size: 3rem;
+    font-weight: 300;
+    color: var(--cor1);
+    padding: 2rem;
+}
+
+.noticias h3 {
+    font-family: var(--fonte-josefin);
+    font-size: 2.3rem;
+    font-weight: 500;
+    color: var(--cor3);
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+}
+
+.noticias p {
+    font-size: 1.8rem;
+    padding-top: 2rem;
+}
+
+.noticias a {
+    font-family: var(--fonte-josefin);
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: var(--cor2);
+}
+.noticias a:hover {
+    color: var(--cor3);
 }
